@@ -1,0 +1,266 @@
+<!--2572033 - Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website - 2572033</title>
+    <style>
+        * { margin:0; padding:0; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body{
+            Display: grid;
+            Grid-template-columns: 250px 1fr;
+            Grid-template-rows: auto 1fr auto;
+            Grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+            Min-height: 100vh;
+        }
+        header{
+            grid-area: header;
+            border-bottom: 2px solid #007478;
+            background-color: white;
+            display: flex;
+            padding: 10px
+        }
+        .judul{
+            margin: 0px 10px
+        }
+        .judul p{
+            margin: 0px 5px
+        }
+        h1{
+            padding: 5px;
+        }
+        img{
+            width: 60px;
+            height: auto;
+        }
+        .sidebar{
+            Grid-area: sidebar;
+            Background-color: #f8f9fa;
+            Border-right: 1px solid #ddd;
+            Height: 80vh;
+            Padding-top: 20px;
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+        }
+        .list li{
+            display: block;
+            padding: 15px;
+            position: relative;
+        }
+        .list a{
+            color: black;
+            text-decoration: none;
+        }
+        .list li:hover>a{
+            color:white;
+            background-color: #007478;
+        }
+        .list li:hover{
+            color:white;
+            background-color: #007478;
+            cursor: pointer;
+        }
+        .dropdown{
+            display:none;
+            Position: absolute;
+            Left: 100%;
+            top: 0;
+            Width: 200px;
+            Background-color: #00858a;
+        }
+        .has-dropdown .dropdown:hover{
+            display: flex;
+        }
+        .list li:hover .dropdown{
+            display: block;
+        }
+        .content{
+            Grid-area: content;
+            Display: flex;
+            Flex-wrap:wrap;
+            Justify-content: center;
+            Background-color: #f0f2f5;
+            margin: auto;
+        }
+        .card{
+            Background-color:white;
+            Display: flex;
+            Width: 320px;
+            Flex-direction: column;
+            padding: 50px;
+            height: 450px;
+        }
+        .icon{
+            Background-color: #007478;
+            Display: flex;
+            Align-items: center;
+            justify-content: center;
+            Font-size: 20px;
+            Border-radius: 10px;
+            Height: 50px;
+            width: 50px;
+            color: white;
+        }
+        h3{
+            color: #2c3e50;
+            margin: 15px 0px
+        }
+        p{
+            color: #636e72;
+        }
+        button{
+            Background-color: #007478;
+            Color: white;
+            Border: none;
+            Font-weight: bold;
+            padding: 14px;
+            border-radius: 12px;
+            margin-top: auto;
+            cursor: pointer;
+        }
+        footer{
+            grid-area: footer;
+            background-color: #2c3e50;
+        }
+        .footer-container{
+            Display: flex;
+            Justify-content:space-around;
+            Flex-wrap: wrap;
+        }
+        .footer-bottom{
+            color: #bdc3c7;
+            border-top: 1px solid #3e4f5f;
+            text-align: center;
+            padding: 20px
+        }
+        .footer-section h3{
+            color: #00d1da;
+            margin: 5px 0px 15px 0
+        }
+        .footer-section{
+            padding: 15px
+        }
+        .footer-section a{
+            text-decoration: none;
+            color: #bdc3c7;
+        }
+        .footer-section li{
+            list-style: none;
+            padding: 7px 0px
+        }
+        .footer-section p{
+            color: #bdc3c7;
+            margin-top: 4px
+        }
+        @media(max-width: 768px){
+            body{
+                Grid-template-columns: 1fr;
+                grid-template-areas:
+                "header"
+                "sidebar"
+                "content"
+                "footer";
+            }
+            .sidebar{
+                height: auto;
+                position: relative;
+            }
+            .dropdown{
+                position: static;
+                width: 100%;
+            }
+            .card{
+                height: 270px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+    <img src="logo-Maranatha.png" alt="">
+        <div class="judul">
+            <h1>Teknik Informatika</h1>
+            <p>Universitas Kristen Maranatha</p>
+        </div>
+    </header>
+    <nav class="sidebar">
+        <ul class="list">
+            <li><a href="#">Beranda</a></li>
+            <li class="has-dropdown">
+            <a href="#">Akademik ▾</a>
+            <ul class="dropdown">
+                <li><a href="#">Kurikulum</a></li>
+                <li><a href="#">Dosen</a></li>
+                <li><a href="#">Fasilitas</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Kemahasiswaan</a></li>
+            <li class="has-dropdown">
+            <a href="#">Layanan ▾</a>
+            <ul class="dropdown">
+                <li><a href="#">Pendaftaran</a></li>
+                <li><a href="#">Beasiswa</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="card">
+            <div class="icon">1</div>
+            <h3>Web Development</h3>
+            <p>Membangun website modern yang responsif dan cepat menggunakan 
+            teknologi terbaru seperti React dan
+            Laravel.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <div class="icon">2</div>
+            <h3>UI/UX Design</h3>
+            <p>Desain antarmuka yang intuitif dan pengalaman pengguna yang 
+            luar biasa untuk aplikasi masa kini.</p>
+            <button>Learn More</button>
+        </div>
+            <div class="card">
+            <div class="icon">3</div>
+            <h3>Mobile Apps</h3>
+            <p>Pengembangan aplikasi Android dan iOS dengan performa tinggi 
+            untuk kebutuhan bisnis Anda.</p>
+            <button>Learn More</button>
+        </div>
+    </main>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Lokasi Kampus</h3>
+            <p>Gedung FTRC, Lt. 6</p>
+            <p>Jl. Surya Sumantri No. 65</p>
+            <p>Bandung, Jawa Barat</p>
+        </div>
+        <div class="footer-section">
+            <h3>Link Cepat</h3>
+            <ul class="footer-links">
+                <li><a href="#">Portal Mahasiswa</a></li>
+                <li><a href="#">E-Learning</a></li>
+                <li><a href="#">Perpustakaan</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Kontak</h3>
+            <p>WA: 0813-2482-3465</p>
+            <p>Email: informatics@maranatha.edu</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <strong>&copy; 2026 2572033 Joseph Xavier Tan. All rights reserved.</strong>
+    </div>
+    </footer>
+</body>
+</html>

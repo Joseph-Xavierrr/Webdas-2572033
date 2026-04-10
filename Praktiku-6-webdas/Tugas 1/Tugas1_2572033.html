@@ -1,0 +1,206 @@
+<!--2572033 - Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - 2572033</title>
+    <style>
+        * { 
+            margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; 
+        }
+        body{
+            display: grid;
+            grid-template-columns: 180px 1fr 220px;
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            grid-template-areas:
+            "header header header"
+            "topnav topnav topnav"
+            "filter agenda-list pengumuman"
+            "footer footer footer";
+        }
+        header{
+            grid-area: header;
+            Background-color: #1a3c5e;
+            color: white;
+            Padding: 20px 30px;
+            Display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .topnav{
+            grid-area: topnav;
+            Background-color: #2c5f8a;
+            display: flex;
+        }
+        .topnav a{
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .topnav a:hover{
+            background-color: #1a3c5e
+        }
+        .filter{
+            grid-area: filter;
+            Background-color: #f0f4f8;
+            border-right: 1px solid #ccc;
+            Padding: 20px
+        }
+        .filter ul{
+            list-style: none;
+        }
+        .filter li{
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .filter li:hover{
+            background-color:#dce8f5;
+        }
+        .agenda-list{
+            grid-area: agenda-list;
+            Background-color: white;
+            padding: 20px;
+        }
+        .agenda-card{
+            border-radius: 8px;
+            border: 1px solid #ddd; 
+            padding: 16px; 
+            margin-bottom: 14px;
+        }
+        .tanggal{
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .kategori-seminar{
+            border-radius: 20px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+        .kategori-workshop{
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #16a34a;
+            font-weight: bold;
+        }
+        .kategori-lomba{
+            border-radius: 20px;
+            background: #fef9c3; 
+            color: #ca8a04;
+            font-weight: bold;
+        }
+        .pengumuman{
+            grid-area: pengumuman;
+            Background-color: #fffbeb;
+            border-left: 1px solid #fcd34d;
+            Padding: 20px;
+        }
+        footer{
+            grid-area: footer;
+            Background-color: #1a3c5e; 
+            color: #94a3b8;
+            Text-align: center;
+            padding: 16px;   
+        }
+        .pengumuman li{
+            padding: 10px 0;
+            border-bottom: 1px solid #fde68a; 
+            list-style: none;
+        }
+        @media only screen and (max-width:900px){
+            body{
+                grid-template-areas: 
+                "header header"
+                "topnav topnav"
+                "filter agenda-list"
+                "footer footer";
+                grid-template-columns: 180px 1fr;
+            }
+            .pengumuman{
+                display: none;
+            }
+        }
+        @media only screen and (max-width:600px){
+            body{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header"
+                "topnav"
+                "agenda-list"
+                "footer";
+            }
+            .filter{
+                display: none;
+            }
+            .topnav{
+                display: flexbox;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AgendaKampus</h1>
+        <p>Portal Kegiatan Mahasiswa</p>
+    </header>
+    <nav class="topnav">
+        <a href="#">Beranda</a>
+        <a href="#">Agenda</a>
+        <a href="#">Organisasi</a>
+        <a href="#">Pengumuman</a>
+        <a href="#">Kontak</a>
+    </nav>
+    <aside class="filter">
+    <h3>Filter Kategori</h3>
+        <ul>
+            <li>Seminar</li>
+            <li>Workshop</li>
+            <li>Lomba</li>
+            <li>Olahraga</li>
+            <li>Seni & Budaya</li>
+        </ul>
+    </aside>
+    <main class="agenda-list">
+ <!-- Salin minimal 4 div berclass agenda-card -->
+        <div class="agenda-card">
+            <span class="tanggal">12 Apr 2026</span>
+            <h3>Seminar AI & Future of Work</h3>
+            <p>Aula Gedung A, 09.00 - 12.00 WIB</p>
+            <span class="kategori-seminar">Seminar</span>
+        </div>
+        <div class="agenda-card">
+            <span class="tanggal">15 Apr 2026</span>
+            <h3>Workshop Web Development</h3>
+            <p>Lab Komputer 3, 03.00 - 16.00 WIB</p>
+            <span class="kategori-workshop">Workshop</span>
+        </div>
+        <div class="agenda-card">
+            <span class="tanggal">20 Apr 2026</span>
+            <h3>Lomba UI/UX Design</h3>
+            <p>Online via Zoom, 08.00 WIB</p>
+            <span class="kategori-lomba">Lomba</span>
+        </div>
+        <div class="agenda-card">
+            <span class="tanggal">22 Apr 2026</span>
+            <h3>Seminar Cyber Security</h3>
+            <p>Auditorium Utama, 10.00 WIB</p>
+            <span class="kategori-seminar">Seminar</span>
+        </div>
+    </main>
+    <aside class="pengumuman">
+        <h3>Pengumuman Terbaru</h3>
+        <ul>
+            <li>Pendaftaran UKM dibuka</li>
+            <li>Libur Nasional 14 April</li>
+            <li>Beasiswa Prestasi 2026</li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy; 2026 2572033 Joseph Xavier Tan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
