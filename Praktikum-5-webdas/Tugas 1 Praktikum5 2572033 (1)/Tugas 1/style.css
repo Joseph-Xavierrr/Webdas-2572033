@@ -1,0 +1,50 @@
+*{
+    font-family: Tahoma;
+}
+body{
+    background-color:#f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 1500px
+}
+#header-blog{
+    text-align: center;
+    padding: 30px;
+    background-color: #1a237e;
+    color: white;
+}
+#navigasi-utama{
+    background-color: #ffca28;
+    text-align: center;
+    position: sticky;
+    top: 0
+}
+#artikel-konten{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px
+}
+ul{
+    list-style-type: none; 
+    margin: 0; 
+    padding: 15px;
+}
+li{
+    display:inline;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    padding: 15px 20px;
+    color: black
+}
+a:hover{
+    background-color: white;
+    
+}
+.teks-rahasia{
+    visibility: hidden;
+}
