@@ -1,0 +1,257 @@
+<!--2572033 - Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - 2572033</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        }
+
+        .Hero {
+            background-image: linear-gradient(to right, #708DF9, #A777E3);
+        }
+
+        #laptop-hero {
+            font-size: 150px;
+        }
+
+        .object-fit-cover {
+            max-height: 300px;
+            object-fit: contain;
+            margin: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .mt-auto {
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex bg-dark p-3">
+        <h2 class="text-light mt-1">&#128187; TechStore</h2>
+        <ul class='list-unstyled d-flex text-secondary mx-4'>
+            <li class="p-2 mt-1">Home</li>
+            <li class="p-2 mt-1">Products</li>
+            <li class="p-2 mt-1">FAQ</li>
+            <li class="p-2 mt-1">About</li>
+        </ul>
+        <button class="btn btn-outline-info ms-auto">
+            🔔Enable Notifications
+        </button>
+    </header>
+
+    <div class="Hero p-5 d-flex align-items-center">
+        <div class="p-5">
+            <button class="btn bg-light fw-bold">New Arrivals 2025</button>
+            <h1 class="text-light pt-2 fw-bold">Upgrade Your Tech.</h1>
+            <h1 class="text-light pt-1 fw-bold">Upgrade Your Life.</h1>
+            <p class="text-light pt-2">The latest gadgets, best prices, and free delivery on all orders above Rp 500.000
+            </p>
+            <div>
+                <button class="btn btn-light fw-bold rounded">Shop Now</button>
+                <button class="btn btn-outline-light rounded">Learn More</button>
+            </div>
+        </div>
+        <h1 id="laptop-hero" class="d-flexbox m-auto">&#128187;</h1>
+    </div>
+    <main>
+        <div class="p-5">
+            <h2 class="fw-bold">Promo Terbaru</h2>
+            <div id="carouselExampleIndicators" class="carousel slide p-2">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner bg-warning rounded-4">
+                    <div class="carousel-item active text-center py-5">
+                        <img class="object-fit-cover"
+                            src="https://i02.appmifile.com/666_item_id/25/11/2025/801df3094aaf8bef7020913e1575da6c.png?thumb=1&q=85"
+                            class="d-block w-100" alt="...">
+                        <h1 class="fw-bold">Poco Pad M1</h1>
+                        <h5 class="text-decoration-line-through text-secondary">Rp 4.199.000</h5>
+                        <h2 class="text-danger fw-bold">Rp 3.990.000</h2>
+                        <p>!!!LIMITED TIME SALE!!!</p>
+                    </div>
+                    <div class="carousel-item text-center py-5">
+                        <img class="object-fit-cover"
+                            src="https://p3-ofp.static.pub//fes/cms/2024/12/26/a95m3ujigs7g89r8dy8u6tuk4bawdc795866.png"
+                            class="d-block w-100" alt="...">
+                        <h1 class="fw-bold">Lenovo ThinkPad L13 Gen 5</h1>
+                        <h5 class="text-decoration-line-through text-secondary">Rp 21.990.000</h5>
+                        <h2 class="text-danger fw-bold">Rp 20.990.000</h2>
+                        <p>!!!LIMITED TIME SALE!!!</p>
+                    </div>
+                    <div class="carousel-item text-center py-5">
+                        <img class="object-fit-cover"
+                            src="https://global.dev.infinixmobility.com/media/wysiwyg/x6853_note40_base4_family.png"
+                            class="d-block w-100" alt="...">
+                        <h1 class="fw-bold">Infinix NOTE 40</h1>
+                        <h5 class="text-decoration-line-through text-secondary">Rp 2.499.000</h5>
+                        <h2 class="text-danger fw-bold">Rp 2.099.000</h2>
+                        <p>!!!LIMITED TIME SALE!!!</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="p-5">
+            <h1 class="fw-bold">Produk</h1>
+            <div class="container gap-5 ">
+                <div class="row row-cols-1 row-cols-md-4 justify-content-between d-flex align-items-stretch">
+
+                    <div class="col col-md-4">
+                        <div class="card h-100">
+                            <div class="card-img-top p-3 d-flex flex-column flex-grow-1">
+                                <img class="card-img"
+                                    src="https://dlcdnwebimgs.asus.com/gain/7909b0a1-1457-4953-a9e7-41b2be78affa/">
+                            </div>
+                            <div class="card-main p-3 d-flex flex-column flex-grow-1">
+
+                                <span
+                                    class="text-light text-bg-danger p-2 my-2 rounded-2 fw-bold align-self-start">NEW</span>
+                                <div class="card-title my-3">
+                                    <h4 class="fw-bold">Asus TUF Gaming A15</h4>
+                                </div>
+                                <p>AMD Ryzen 7 7735HS, NVIDIA RTX 4060 8GB GDDR6, 16GB DDR5, SSD 512GB NVMe, Layar 15.6"
+                                    FHD 144Hz</p>
+                                <p class="fw-bold">Rp 14.990.000</p>
+
+                                <button class="btn text-light btn-primary w-100 mt-auto" onclick="showToast()">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4">
+                        <div class="card h-100">
+                            <div class="card-img-top p-3 d-flex flex-column flex-grow-1 justify-content-center">
+                                <img class="card-img"
+                                    src="https://p1-ofp.static.pub/fes/cms/2022/12/07/l64k7j84ev4j8cs5nax600vwvxfu7p875096.png">
+                            </div>
+                            <div class="card-main p-3 d-flex flex-column flex-grow-1">
+                                <br>
+                                <span class="text-light text-bg-info p-2 my-2 rounded-2 fw-bold align-self-start">Best
+                                    Selling</span>
+                                <div class="card-title my-3">
+                                    <h4 class="fw-bold">Lenovo Yoga 9i Gen 8</h4>
+                                </div>
+                                <p>Intel Core i7-1360P Evo, Intel Iris Xe, 16GB LPDDR5x, 1TB SSD, Layar 14" 2.8K OLED
+                                    Touch 90Hz</p>
+                                <p class="fw-bold">Rp 24.990.000</p>
+                                <button class="btn text-light btn-primary w-100 mt-auto" onclick="showToast()">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-4">
+                        <div class="card h-100">
+                            <div class="card-img-top p-3 d-flex flex-column flex-grow-1">
+                                <img class="card-img"
+                                    src="https://www.apple.com/v/ipad-air/ag/images/overview/two-sizes/gallery-toggle/spin_reverse_endframe__crvqft16efue_large.png">
+                            </div>
+                            <div class="card-main p-3 d-flex flex-column flex-grow-1">
+
+                                <span
+                                    class="text-light text-bg-success p-2 my-2 rounded-2 fw-bold align-self-start">Popular</span>
+                                <div class="card-title my-3">
+                                    <h4 class="fw-bold">Ipad Air 7</h4>
+                                </div>
+                                <p>Apple M3 Chip, 8-Core CPU/10-Core GPU, Layar 11" Liquid Retina P3, Port USB-C,
+                                    Support Apple Pencil Pro</p>
+                                <p class="fw-bold">Rp 10.490.000</p>
+                                <button class="btn text-light btn-primary w-100 mt-auto" onclick="showToast()">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="p-5">
+            <h1 class="fw-bold">FAQ</h1>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Apakah semua produk memiliki garansi resmi?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Ya semua produk yang kami jual merupakan produk original dengan garansi resmi dari produsen yang dapat di claim selama minimal 12 bulan.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Bagaimana keamanan pengiriman untuk barang elektronik?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Setiap pengiriman sudah termasuk asuransi dan dikemas menggunakan bubble wrap tebal serta packing kayu tambahan untuk memastikan gadget sampai dalam kondisi sempurna.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Apakah bisa tukar tambah atau retur jika barang cacat?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Tentu. Jika produk yang diterima mengalami cacat pabrik, Anda dapat mengajukan retur dalam waktu 2x24 jam setelah barang diterima dengan syarat menyertakan video unboxing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toast bg-success position-fixed bottom-0 end-0 p-3 z-index:1100" id="notifToast">
+            <p class="fw-bold fs-5 text-light">Produk berhasil ditambahkan ke keranjang!</p>
+        </div>
+        <footer class="bg-dark text-white py-4 text-center">
+            &copy; Joseph Xavier Tan 2572033. All rights reserved.
+        </footer>
+    </main>
+    <script>
+        function showToast() {
+            const toastEl = document.getElementById('notifToast'); // sesuaikan ID-nya
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+    </script>
+</body>
+
+</html>
