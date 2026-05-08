@@ -1,0 +1,111 @@
+<!--2572033 Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenRGB 2572033</title>
+    <style>
+        .card{
+            text-align: center;
+            align-items: center;
+            box-shadow: 1px 1px 1px black;
+            border-radius: 4;
+            background-color: white;
+            width: 300px;
+            padding: 50px;
+            border-radius: 12px;
+            margin:auto;
+
+        }
+        #counter{
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .btn-reset{
+            font-weight: bold;
+            padding: 5px;
+            margin: 3px;
+        }
+        .btn-container button{
+            font-weight: bold;
+            padding: 5px;
+            margin: 11px 5px;
+        }
+        .footer{
+            color: gray;
+        }
+        .display-area{
+            margin: 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>RGB Control Panel</h1>
+
+        <div class="rgb-group">
+            <input type="number" id="r" class="rgb-input" placeholder="R" min="0" max="255">
+            <input type="number" id="g" class="rgb-input" placeholder="G" min="0" max="255">
+            <input type="number" id="b" class="rgb-input" placeholder="B" min="0" max="255">
+        </div>
+
+        <div class="btn-container">
+            <button class="btn-submit" onclick="terap()">Terapkan</button>
+            <button class="btn-random" onclick="acak()">Acak
+                Warna</button>
+        </div>
+        <div class="display-area">
+            <div>Skor Saat Ini:</div>
+            <div id="counter">0</div>
+        </div>
+        <div class="btn-container">
+            <button class="btn-add" onclick="tambah()">Tambah (+1)</button>
+            <button class="btn-remove" onclick="kurang()">Kurang (
+                1)</button>
+        </div>
+        <button class="btn-reset" onclick="reset()">Reset Ke
+            Default</button>
+        <div class="footer">
+            <strong>&copy; 2026 2572033 - Joseph Xavier Tan. All rights
+                reserved.</strong>
+        </div>
+    </div>
+
+    <script>
+        var count = 0
+        function tambah() {
+            count += 1
+            document.getElementById("counter").innerHTML = count;
+        }
+         function kurang() {
+            count -= 1
+            document.getElementById("counter").innerHTML = count;
+        }
+        function reset() {
+            count = 0
+            document.getElementById("counter").innerHTML = count;
+            document.body.style.background = "white";
+            document.getElementById("r").value = null;
+            document.getElementById("g").value = null;
+            document.getElementById("b").value = null;
+        }
+        function acak() {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            document.getElementById("r").value = r;
+            document.getElementById("g").value = g;
+            document.getElementById("b").value = b;
+        }
+        function terap() {
+            var r = document.getElementById("r").value;
+            var g = document.getElementById("g").value;
+            var b = document.getElementById("b").value;
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        } 
+    </script>
+</body>

@@ -1,0 +1,123 @@
+<!--2572033 Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 2572033</title>
+    <style>
+        .foto{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+        }
+        .tombol{
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        img{
+            max-height: 400px;
+            width: auto;
+        }
+        #pengumuman{
+            text-align: center;
+            margin-top: 20px;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+            margin: 0 6px;
+        }
+        p{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="foto">
+            <img src="" id="player">
+            <p id="pcount">0</p>
+            <p>-</p>
+            <p id="comcount">0</p>
+            <img src="" id="computer">
+        </div>
+        <div class="tombol">
+            <button class="rock" onclick="batu()">&#129704;</button>
+            <button class="paper" onclick="kertas()">&#128196;</button>
+            <button class="scissor" onclick="gunting()">&#9986;</button>
+        </div>
+        <div id="pengumuman"></div>
+    </div>
+
+    <script>
+        var rng = 0
+        var pcount = 0
+        var comcount = 0
+        function batu() {
+            document.getElementById("player").src = "rock.png";
+            var rng = Math.floor(Math.random() * 3);
+            if (rng == 0) { 
+                document.getElementById("computer").src = "rock.png";
+                document.getElementById("pengumuman").innerHTML = "DRAW!";
+            }
+            if (rng == 1) { 
+                document.getElementById("computer").src = "scissor.png";
+                document.getElementById("pengumuman").innerHTML = "PLAYER WIN!";
+                pcount += 1
+                document.getElementById("pcount").innerHTML = pcount
+            }
+            if (rng == 2) { 
+                document.getElementById("computer").src = "paper.png";
+                document.getElementById("pengumuman").innerHTML = "BOT WIN!";
+                comcount += 1
+                document.getElementById("comcount").innerHTML = comcount
+            }
+        }
+        function kertas() {
+            document.getElementById("player").src = "paper.png";
+            var rng = Math.floor(Math.random() * 3);
+            if (rng == 0) { 
+                document.getElementById("computer").src = "paper.png";
+                document.getElementById("pengumuman").innerHTML = "DRAW!";
+            }
+            if (rng == 1) { 
+                document.getElementById("computer").src = "rock.png";
+                document.getElementById("pengumuman").innerHTML = "PLAYER WIN!";
+                pcount += 1
+                document.getElementById("pcount").innerHTML = pcount
+            }
+            if (rng == 2) { 
+                document.getElementById("computer").src = "scissor.png";
+                document.getElementById("pengumuman").innerHTML = "BOT WIN!";
+                comcount += 1
+                document.getElementById("comcount").innerHTML = comcount
+            }
+        }
+        function gunting() {
+            document.getElementById("player").src = "scissor.png";
+            var rng = Math.floor(Math.random() * 3);
+            if (rng == 0) { 
+                document.getElementById("computer").src = "scissor.png";
+                document.getElementById("pengumuman").innerHTML = "DRAW!";
+            }
+            if (rng == 1) { 
+                document.getElementById("computer").src = "paper.png";
+                document.getElementById("pengumuman").innerHTML = "PLAYER WIN!";
+                pcount += 1
+                document.getElementById("pcount").innerHTML = pcount
+            }
+            if (rng == 2) { 
+                document.getElementById("computer").src = "rock.png";
+                document.getElementById("pengumuman").innerHTML = "BOT WIN!";
+                comcount += 1
+                document.getElementById("comcount").innerHTML = comcount
+            }
+        }
+    </script>
+</body>
+</html>

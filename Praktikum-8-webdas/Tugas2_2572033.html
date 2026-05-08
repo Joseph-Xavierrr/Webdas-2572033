@@ -1,0 +1,64 @@
+<!--2572033 Joseph Xavier Tan-->
+<!DOCTYPE html>
+<html lang="id">
+
+<head></head>
+
+<body>
+    <h1>Quiz Matematika</h1>
+    <p>Hello world mtk</p>
+    <button onclick="mulaiQuiz()">Mulai Quiz</button>
+    <h2 id="result"></h2>
+    <p id="datetime"></p>
+    <script>
+        function mulaiQuiz() {
+            const operasi = ['+','-','*']
+            score = 0
+            totalsoal = 0
+
+            while (true) {
+                let v1 = Math.floor(Math.random() * 20 + 1);
+                let v2 = Math.floor(Math.random() * 20 + 1);
+                let op = operasi[Math.floor(Math.random() * operasi.length)];
+
+                let ans = prompt('Berapa hasil dari ' + v1 + ' ' + op + ' ' + v2 );
+
+                if (op == '+') {
+                    var benar = v1 + v2
+                }
+                else if (op == '-') {
+                    var benar = v1 - v2
+                }
+                else if (op == '*') {
+                    var benar = v1 * v2
+                }
+
+                if (ans == 'exit' || ans == null) {
+                    break;
+                }
+                else if (ans == benar) {
+                    alert('Benar!')
+                    score += 1
+                    totalsoal += 1
+                }
+                else if (ans != benar) {
+                    alert('Salah! jawaban yang benar adalah ' + benar)
+                    totalsoal += 1
+                }
+                
+            }
+
+            let tampil = confirm('Apakah ingin menampilkan skor?');
+
+            if (tampil == true) {
+                document.getElementById('result').innerHTML = 'Skor Akhir: ' + score + ' / ' + totalsoal;
+                
+            }
+            
+            document.getElementById('datetime').innerHTML = new Date().toLocaleString();
+        } 
+    </script>
+    <footer>2572033 Joseph Xavier Tan</footer>
+</body>
+
+</html>
