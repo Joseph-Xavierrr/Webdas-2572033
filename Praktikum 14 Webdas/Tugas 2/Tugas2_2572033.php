@@ -40,7 +40,6 @@ if (isset($_POST['register'])) {
     }
 }
 
-// --- LOGIKA LOGIN ---
 if (isset($_POST['login'])) {
     $email_username = $_POST['email_username'];
     $password_input = $_POST['password'];
